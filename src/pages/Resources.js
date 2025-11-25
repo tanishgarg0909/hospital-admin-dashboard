@@ -7,11 +7,17 @@ const initialResources = {
 };
 
 const initialInventory = [
-    { item: 'Paracetamol', type: 'Pharmacy', quantity: 5000, lowThreshold: 1000 },
-    { item: 'Blood Test Kits', type: 'Lab', quantity: 350, lowThreshold: 500 }, // Low
-    { item: 'Surgical Gloves', type: 'Pharmacy', quantity: 800, lowThreshold: 500 },
+  { item: 'Paracetamol', type: 'Pharmacy', quantity: 5000, lowThreshold: 1000 },
+  { item: 'Blood Test Kits', type: 'Lab', quantity: 350, lowThreshold: 500 }, // Low
+  { item: 'Surgical Gloves', type: 'Pharmacy', quantity: 800, lowThreshold: 500 },
+  { item: 'IV Drip Sets', type: 'Procedure', quantity: 1200, lowThreshold: 750 },
+  { item: 'Amoxicillin 500mg', type: 'Pharmacy', quantity: 900, lowThreshold: 2000 }, // Low
+  { item: 'Sterilization Solution', type: 'Janitorial', quantity: 200, lowThreshold: 100 },
+  { item: 'X-Ray Film', type: 'Radiology', quantity: 60, lowThreshold: 100 }, // Low
+  { item: 'Defibrillator Pads', type: 'ER', quantity: 450, lowThreshold: 100 },
+  { item: 'Patient ID Bands', type: 'Admin', quantity: 3000, lowThreshold: 5000 }, // Low
+  { item: 'Adhesive Bandages', type: 'Pharmacy', quantity: 7500, lowThreshold: 1000 },
 ];
-
 const Resources = () => {
   const [resources, setResources] = useState(initialResources);
   const [inventory, setInventory] = useState(initialInventory);
