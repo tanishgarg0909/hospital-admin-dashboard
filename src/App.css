@@ -1,17 +1,38 @@
+/* ====================================================== */
+/* 💎 Professional Blue & White Theme CSS (Enhanced) 💎 */
+/* ====================================================== */
+
 /* --- Global Variables & Resets --- */
 :root {
-  --primary-color: #007bff; /* Accent Blue */
-  --secondary-color: #28a745; /* Success Green */
-  --sidebar-bg: #2c3e50; /* Darker Navy/Charcoal for Sidebar */
+  /* Enhanced Blue Palette */
+  --primary-color: #0069d9; /* Royal Blue - Deeper, more authoritative */
+  --primary-dark: #004c99; /* Darker Blue for Hover/Active */
+  --primary-light: #f0f7ff; /* Extremely Light Blue for Subtle BG/Highlight */
+  --secondary-color: #20c997; /* Teal/Success Color for contrast */
+
+  /* Grayscale Palette */
+  --sidebar-bg: #1f3a5f; /* Deep Navy/Indigo for Sidebar - Richer contrast */
   --header-bg: #ffffff;
-  --body-bg: #f5f7f9; /* Light Gray Background */
+  --body-bg: #f8f9fa; /* Very Light Gray/Off-White for Main Background */
   --card-bg: #ffffff;
-  --text-color: #34495e; /* Darker text */
-  --text-light: #ecf0f1;
-  --border-color: #e0e6ed;
-  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+  --text-color: #343a40; /* Dark Charcoal for main text - Better contrast */
+  --text-muted: #6c757d; /* Muted text for secondary info */
+  --text-light: #e9ecef; /* Light Gray for dark backgrounds */
+  --border-color: #e9ecef; /* Extremely soft border line */
+
+  /* Shadowing (Softer, more diffused look) */
+  --shadow-base: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --shadow-sidebar: 6px 0 10px rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --font-main: 'Poppins', sans-serif;
+  --transition-speed: 0.3s;
+  --border-radius: 8px; /* Consistent, moderate border radius */
 }
+
+/* Ensure Poppins font is imported in your HTML for best results */
+/* <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> */
 
 * {
   box-sizing: border-box;
@@ -19,23 +40,28 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-main);
   background-color: var(--body-bg);
   color: var(--text-color);
   line-height: 1.6;
+  min-height: 100vh;
+  transition: background-color var(--transition-speed);
 }
 
 /* Headings & Typography */
 h1, h2, h3 {
   color: var(--text-color);
   font-weight: 600;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.8rem;
-  padding-bottom: 15px;
+  font-size: 1.75rem; /* Slightly reduced for elegance */
+  padding-bottom: 12px;
   margin-bottom: 25px;
+  /* Use a very subtle border/gradient for modern section separation */
   border-bottom: 1px solid var(--border-color);
+  color: var(--primary-dark);
 }
 
 /* --- App Layout --- */
@@ -51,32 +77,37 @@ h2 {
 }
 
 .page-content {
-  padding: 25px;
+  padding: 30px 40px; /* Increased padding for an airy feel */
   flex-grow: 1;
 }
 
-/* --- 1. Login Page Styling (Clean Card) --- */
+/* ====================================================== */
+/* 1. Login Page Styling (Elevated Card) */
+/* ====================================================== */
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--body-bg);
+  /* Use a smooth, radial gradient for a high-end feel */
+  background-image: radial-gradient(circle at top left, var(--body-bg) 50%, var(--primary-light) 100%);
 }
 
 .login-container form {
   background: var(--card-bg);
-  padding: 40px 50px;
-  border-radius: 10px;
-  box-shadow: var(--shadow-light);
+  padding: 50px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-base);
   width: 100%;
-  max-width: 400px;
-  transition: transform 0.3s;
+  max-width: 400px; /* Slightly narrower, more focused */
+  transition: all var(--transition-speed);
+  border-top: 4px solid var(--primary-color); /* Thematic top border */
 }
 
 .login-container form:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px); /* Subtle lift */
+  box-shadow: var(--shadow-hover);
 }
 
 .login-container h2 {
@@ -84,26 +115,30 @@ h2 {
   color: var(--primary-color);
   border-bottom: none;
   margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
-/* --- 2. Sidebar Navigation (Dark) --- */
+/* ====================================================== */
+/* 2. Sidebar Navigation (Sleek Dark) */
+/* ====================================================== */
 .sidebar {
-  width: 250px;
+  width: 260px; /* Slightly wider */
   background-color: var(--sidebar-bg);
   color: var(--text-light);
-  padding-top: 20px;
-  box-shadow: var(--shadow-light);
+  padding-top: 30px;
+  box-shadow: var(--shadow-sidebar); /* Use variable shadow */
   flex-shrink: 0;
 }
 
 .sidebar h3 {
   text-align: center;
   color: white;
-  margin-bottom: 30px;
-  font-size: 1.4rem;
+  margin-bottom: 40px;
+  font-size: 1.6rem;
   font-weight: 700;
-  padding: 0 20px 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 20px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle separator */
 }
 
 .sidebar ul {
@@ -112,32 +147,39 @@ h2 {
 }
 
 .sidebar li a {
-  display: block;
-  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 30px; /* More vertical padding */
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: background-color 0.2s, color 0.2s;
+  font-size: 1rem;
+  transition: all var(--transition-speed);
 }
 
 .sidebar li a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.08); /* Lighter hover tint */
   color: white;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 26px; /* Adjust padding to accommodate border */
 }
 
 .sidebar li .active-link {
   background-color: var(--primary-color);
   color: white;
-  border-left: 5px solid white;
-  padding-left: 15px;
+  border-left: 6px solid var(--primary-light);
+  padding-left: 24px;
   font-weight: 600;
+  box-shadow: 1px 0 8px rgba(0, 0, 0, 0.3);
 }
 
-/* --- 3. Header (Clean) --- */
+/* ====================================================== */
+/* 3. Header (Clean & Elevated) */
+/* ====================================================== */
 .header {
   background-color: var(--header-bg);
-  padding: 15px 30px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px 40px; /* Increased vertical padding */
+  box-shadow: var(--shadow-base);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,41 +187,49 @@ h2 {
 }
 
 .header h1 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
   color: var(--sidebar-bg);
+  font-weight: 700;
 }
 
 .user-profile {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
-/* --- 4. Forms and Tables (Professional Data Presentation) --- */
+/* ====================================================== */
+/* 4. Forms and Tables (Professional Data Presentation) */
+/* ====================================================== */
 
 /* Reusable Button Styling */
 button {
   background-color: var(--primary-color);
   color: white;
-  padding: 10px 18px;
+  padding: 12px 22px;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-  font-weight: 500;
+  transition: all var(--transition-speed);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-dark);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
-  transform: scale(0.98);
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
 .logout-btn {
-  background-color: #dc3545;
+  background-color: #dc3545; /* Red */
 }
 
 .logout-btn:hover {
@@ -187,29 +237,42 @@ button:active {
 }
 
 .delete-btn {
-  background-color: #6c757d;
+  background-color: var(--text-muted); /* Muted Gray */
 }
 
 .delete-btn:hover {
   background-color: #5a6268;
 }
 
+.edit-btn {
+    background-color: #ffc107; /* Amber Yellow */
+    color: var(--text-color);
+    margin-right: 8px;
+}
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+
 /* Input/Select Styling */
 input[type="text"], input[type="password"], input[type="number"], select {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
+  padding: 15px; /* Generous padding */
+  margin-bottom: 20px;
   border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   box-sizing: border-box;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  color: var(--text-color);
+  background-color: var(--body-bg); /* Slight gray background */
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 input:focus, select:focus {
   border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 0 1px var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(0, 105, 217, 0.15); /* Softer Focus Ring */
+  background-color: var(--card-bg); /* White background on focus */
 }
 
 
@@ -218,49 +281,64 @@ table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  margin-top: 20px;
+  margin-top: 25px;
   background-color: var(--card-bg);
-  box-shadow: var(--shadow-light);
-  border-radius: 8px;
+  box-shadow: var(--shadow-base);
+  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
 th, td {
-  padding: 15px;
+  padding: 15px 20px; /* Consistent, clean padding */
   text-align: left;
   border-bottom: 1px solid var(--border-color);
 }
 
 th {
-  background-color: var(--body-bg); /* Use light gray background for header */
+  background-color: var(--primary-light);
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--primary-dark); /* Deeper text color */
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
 tr:last-child td {
   border-bottom: none;
 }
 
-/* Form/Add Panel (Used across Doctors/Billing) */
+/* Subtle Stripe effect and clean hover */
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tbody tr:hover {
+    background-color: var(--primary-light);
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+/* Form/Add Panel - Elevated Panel */
 .add-doctor-panel { 
     background-color: var(--card-bg);
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: var(--shadow-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-base);
     margin-bottom: 30px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
+    border: 1px solid var(--border-color);
 }
 
 .add-doctor-panel input {
     flex-grow: 1;
-    margin-bottom: 0; /* Remove margin from standard input */
+    margin-bottom: 0;
 }
 
-/* --- 5. Dashboard Grid (Clean Cards) --- */
+/* ====================================================== */
+/* 5. Dashboard Grid (Elevated Cards) */
+/* ====================================================== */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -270,64 +348,94 @@ tr:last-child td {
 
 .stat-card {
   background-color: var(--card-bg);
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: var(--shadow-light);
-  border-left: 5px solid var(--primary-color); /* Highlight border */
-  transition: all 0.3s;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-base);
+  border-left: 5px solid var(--primary-color);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .stat-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px); /* Moderate lift */
     box-shadow: var(--shadow-hover);
 }
 
 .stat-card h3 {
   margin-top: 0;
   font-size: 1rem;
-  color: #7f8c8d; /* Muted gray title */
+  color: var(--text-muted); /* Muted title color */
   border-bottom: none;
   padding-bottom: 0;
   text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
 .stat-card p {
-  font-size: 2.2rem;
+  font-size: 2.5rem; /* Slightly smaller for balance */
   font-weight: 700;
-  color: var(--text-color);
+  color: var(--primary-dark); /* Primary color for numbers */
   margin: 10px 0 0;
 }
 
-/* --- 6. Specific Page Adjustments --- */
+/* ====================================================== */
+/* 6. Specific Page Adjustments */
+/* ====================================================== */
 
 /* Patient/Doctor Table Input Adjustments */
 .patients-page td input,
 .patients-page td select,
 .doctors-page td input {
     margin-bottom: 0;
-    padding: 8px;
+    padding: 10px;
     font-size: 0.9rem;
-    width: 90%;
+    width: 100%;
+    background-color: white; /* Ensure white background in cells */
 }
 
-.edit-btn {
-    background-color: #ffc107; 
-    color: var(--text-color);
-    margin-right: 5px;
+
+/* Resources Page Colors - Using secondary/primary shades */
+/* Primary color for active/success/key resources */
+.resources-page .stat-card[style*="rgb(40, 1. 7, 69)"] {
+    border-left-color: var(--secondary-color) !important; /* Teal/Success */
 }
-.edit-btn:hover {
-    background-color: #e0a800;
+/* Danger/Low stock resources */
+.resources-page .stat-card[style*="rgb(220, 53, 69)"] {
+    border-left-color: #dc3545 !important; /* Danger Red */
 }
 
-/* Resources Page Colors */
-.resources-page .stat-card[style*="rgb(40, 167, 69)"] { /* Success Green */
-    border-left-color: var(--secondary-color) !important;
-}
-.resources-page .stat-card[style*="rgb(220, 53, 69)"] { /* Danger Red */
-    border-left-color: #dc3545 !important;
+/* Billing Status Colors - Clean, modern pills */
+td.status-cell {
+    padding: 0;
 }
 
-/* Billing Status Colors */
-td[style*="green"], td[style*="orange"], td[style*="red"] {
-    font-weight: 600;
+td.status-cell span {
+    display: inline-block;
+    padding: 6px 14px; /* More generous padding */
+    border-radius: 25px; /* Full pill shape */
+    font-size: 0.75rem; /* Slightly smaller font */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Specific Pill Styles */
+td[style*="green"] span {
+    background-color: #d1e7dd; /* Light Success BG */
+    color: #0f5132; /* Dark Success Text */
+}
+
+td[style*="orange"] span {
+    background-color: #fff3cd; /* Light Warning BG */
+    color: #664d03; /* Dark Warning Text */
+}
+
+td[style*="red"] span {
+    background-color: #f8d7da; /* Light Danger BG */
+    color: #842029; /* Dark Danger Text */
+}
+
+/* Final cleanup for table cells */
+table td {
+    vertical-align: middle;
 }
