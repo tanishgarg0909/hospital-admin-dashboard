@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 const initialInvoices = [
   { id: 'INV001', patient: 'John Doe', total: 1500.50, status: 'Paid', date: '2025-11-22' },
   { id: 'INV002', patient: 'Jane Smith', total: 850.00, status: 'Pending', date: '2025-11-24' },
+  { id: 'INV003', patient: 'Michael Lee', total: 320.75, status: 'Paid', date: '2025-11-20' },
+  { id: 'INV004', patient: 'Sarah Connor', total: 5600.00, status: 'Overdue', date: '2025-11-05' },
+  { id: 'INV005', patient: 'David Clark', total: 120.00, status: 'Paid', date: '2025-11-25' },
+  { id: 'INV006', patient: 'Emily Stone', total: 945.20, status: 'Pending', date: '2025-11-25' },
+  { id: 'INV007', patient: 'Robert Hall', total: 2400.99, status: 'Paid', date: '2025-11-18' },
+  { id: 'INV008', patient: 'Olivia King', total: 75.50, status: 'Pending', date: '2025-11-25' },
+  { id: 'INV009', patient: 'Tom Wilson', total: 1890.30, status: 'Overdue', date: '2025-11-10' },
+  { id: 'INV010', patient: 'Jessica Brown', total: 45.00, status: 'Paid', date: '2025-11-23' },
 ];
 
 const Billing = () => {
