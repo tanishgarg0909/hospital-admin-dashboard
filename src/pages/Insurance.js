@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 const initialClaims = [
   { id: 701, patient: 'Mark Brown', policy: 'BlueCross', amount: 3500, status: 'Pending Review', submitted: '2025-11-20' },
   { id: 702, patient: 'Lisa Ray', policy: 'HealthCare Inc.', amount: 1200, status: 'Approved', submitted: '2025-11-18' },
+  { id: 703, patient: 'George Hamilton', policy: 'Global Assurance', amount: 8500, status: 'Denied', submitted: '2025-11-15' },
+  { id: 704, patient: 'Nancy Drew', policy: 'BlueCross', amount: 450.75, status: 'Approved', submitted: '2025-11-21' },
+  { id: 705, patient: 'Peter Parker', policy: 'MedLife', amount: 12000, status: 'Pending Review', submitted: '2025-11-19' },
+  { id: 706, patient: 'Mary Jane', policy: 'HealthCare Inc.', amount: 670.00, status: 'Paid', submitted: '2025-11-14' },
+  { id: 707, patient: 'Bruce Wayne', policy: 'Global Assurance', amount: 25000, status: 'Pending Review', submitted: '2025-11-22' },
+  { id: 708, patient: 'Clark Kent', policy: 'MedLife', amount: 95.50, status: 'Approved', submitted: '2025-11-23' },
+  { id: 709, patient: 'Diana Prince', policy: 'BlueCross', amount: 5100.20, status: 'Paid', submitted: '2025-11-16' },
+  { id: 710, patient: 'Barry Allen', policy: 'HealthCare Inc.', amount: 320.00, status: 'Denied', submitted: '2025-11-24' },
 ];
 
 const Insurance = () => {
