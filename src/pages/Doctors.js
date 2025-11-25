@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 
 const initialDoctors = [
-  { id: 1, name: 'Dr. A Smith', specialty: 'Cardiology', schedule: 'M-F' },
-  { id: 2, name: 'Dr. B Jones', specialty: 'Neurology', schedule: 'T-S' },
+  { id: 1, name: 'Dr. Evelyn Reed', specialty: 'Cardiology', schedule: 'M-W-F' },
+  { id: 2, name: 'Dr. Marcus Chen', specialty: 'Neurology', schedule: 'T-Th-S' },
+  { id: 3, name: 'Dr. Sofia Khan', specialty: 'Pediatrics', schedule: 'M-F' },
+  { id: 4, name: 'Dr. James O’Connell', specialty: 'Orthopedics', schedule: 'M-S' },
+  { id: 5, name: 'Dr. Lena Petrova', specialty: 'Dermatology', schedule: 'W-F' },
+  { id: 6, name: 'Dr. Alex Kim', specialty: 'Oncology', schedule: 'M-T-W-Th' },
+  { id: 7, name: 'Dr. Chloe Davis', specialty: 'Gastroenterology', schedule: 'T-F' },
+  { id: 8, name: 'Dr. Ben Carter', specialty: 'Psychiatry', schedule: 'M-T-W-Th-F' },
+  { id: 9, name: 'Dr. Priya Sharma', specialty: 'Endocrinology', schedule: 'W-Th-S' },
+  { id: 10, name: 'Dr. Victor Rossi', specialty: 'Anesthesiology', schedule: 'M-F (Surgery Support)' },
 ];
 
 const Doctors = () => {
